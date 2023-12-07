@@ -8,6 +8,7 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		
 	/*	String fruit = in.next();
+	 * 
 	
 		switch (fruit) {
 		case "Mango": {
