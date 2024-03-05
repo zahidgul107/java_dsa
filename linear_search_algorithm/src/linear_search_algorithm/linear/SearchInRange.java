@@ -6,6 +6,7 @@ public class SearchInRange {
 		int [] arr = {18, 12, -7, 3, 14, 28};
 		int target = 142;
 		System.err.println(linearSearch(arr, target, 1, 4));
+		
 
 	}
 	
