@@ -9,12 +9,13 @@ public class SearchIn2DArray {
 		int [][] arr = {
 				{23, 4, 1},
 				{18, 12, 3, 9},
-				{78, 99,34,56},
+				{78, 999,34,56},
 				{18, 12}
 				};
 		int target = 34;
 		int[] ans = search(arr, target);
-		System.err.println(Arrays.toString(ans));
+		//System.err.println(Arrays.toString(ans));
+		System.err.println(max(arr));
 	}
 	
 	static int[] search(int[][] arr, int target) {
@@ -26,6 +27,18 @@ public class SearchIn2DArray {
 			}
 		}
 		return new int[] {-1, -1};
+	}
+	
+	static int max(int[][] arr) {
+		int max = Integer.MIN_VALUE;
+		for(int row = 0; row < arr.length; row++) {
+			for (int col = 0; col < arr[row].length; col++) {
+				if (arr[row][col] > max) {
+					max = arr[row][col];
+				}
+			}
+		}
+		return max;
 	}
 
 }
