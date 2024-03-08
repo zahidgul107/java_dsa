@@ -5,8 +5,8 @@ public class EvenDigits {
 	public static void main(String[] args) {
 
 		int[] arr = { 332, 43, 562, 6633, 33, 12, -22 };
-		// System.err.println(findNumbers(arr));
-		System.err.println(findNumbersByString(arr));
+		System.err.println(findNumbers(arr));
+		//System.err.println(findNumbersByString(arr));
 	}
 
 	/**
@@ -43,7 +43,9 @@ public class EvenDigits {
 	}
 
 	private static boolean even(int number) {
-		int numberOfDigits = numberOfDigits(number);
+	//	int numberOfDigits = numberOfDigits(number);
+		int numberOfDigits = digits2(number);
+		System.err.println("number of digits: "+numberOfDigits);
 		if (numberOfDigits % 2 == 0) {
 			return true;
 		}
@@ -57,5 +59,13 @@ public class EvenDigits {
 			number = number / 10;
 		}
 		return count;
+	}
+	
+	/***********========  Time Complexity  ========***************/
+	static int digits2(int num) {
+		if (num < 0) {
+			num = num * -1;
+		}
+		return (int)(Math.log10(num) + 1);
 	}
 }
