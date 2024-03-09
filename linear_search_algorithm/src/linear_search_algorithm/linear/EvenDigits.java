@@ -9,10 +9,6 @@ public class EvenDigits {
 		//System.err.println(findNumbersByString(arr));
 	}
 
-	/**
-	 * @param nums
-	 * @return
-	 */
 	static int findNumbersByString(int[] nums) {
 		int count = 0;
 		for (int i : nums) {
