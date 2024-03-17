@@ -5,6 +5,7 @@ public class EvenDigits {
 	public static void main(String[] args) {
 
 		int[] arr = { 332, 43, 562, 6633, 33, 12, -22 };
+		
 		System.err.println(findNumbers(arr));
 		//System.err.println(findNumbersByString(arr));
 	}
