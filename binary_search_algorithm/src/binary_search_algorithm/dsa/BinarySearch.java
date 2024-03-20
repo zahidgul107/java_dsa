@@ -7,6 +7,7 @@ public class BinarySearch {
 		int target = 22;
 		System.err.println(binarSearch(arr, target));
 	}
+	
 
 	static int binarSearch(int[] arr, int target) {
 		int start = 0;
