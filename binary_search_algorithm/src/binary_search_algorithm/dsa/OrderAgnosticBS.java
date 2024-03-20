@@ -37,7 +37,6 @@ public class OrderAgnosticBS {
 				else
 					start = mid + 1;
 			}
-			
 		}
 		return -1;
 	}
