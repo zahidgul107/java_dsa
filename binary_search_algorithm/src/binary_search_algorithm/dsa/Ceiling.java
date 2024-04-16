@@ -4,7 +4,7 @@ public class Ceiling {
 	
 	public static void main(String[] args) {
 		int[] arr = { 2, 3, 5, 9, 14, 16, 18 };
-		int target = 19;
+		int target = 4;
 		int ans = ceiling(arr, target);
 		System.err.println(ans);
 		
@@ -17,7 +17,7 @@ public class Ceiling {
 			return -1;
 		}
 		int start = 0;
-		int end = arr.length;
+		int end = arr.length - 1;
 
 		while (start <= end) {
 			int mid = start + (end - start) / 2;
