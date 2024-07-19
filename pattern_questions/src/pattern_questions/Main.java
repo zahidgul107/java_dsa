@@ -6,7 +6,8 @@ public class Main {
 	//	pattern1(4);
 	//	pattern2(4);
 	//	pattern3(4);
-		pattern4(6);
+	//	pattern4(6);
+		pattern5(6);
 
 	}
 	
@@ -59,6 +60,16 @@ public class Main {
 		for (int row = 1; row <= n; row++) {
 			for (int col = 1; col <= row; col++) {
 				System.err.print(col + " ");
+			}
+			System.err.println();
+		}
+	}
+	
+	static void pattern5(int n) {
+		for (int row = 0; row < 2 * n; row++) {
+			int totalColsInRow = row > n ? 2 * n - row - 1 : row;
+			for (int col = 0; col < totalColsInRow; col++) {
+				System.err.print("* ");
 			}
 			System.err.println();
 		}
