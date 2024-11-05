@@ -8,8 +8,8 @@ public class ReverseArray {
 		
 		int[] arr = {2, 11, 5, 10, 7, 8};
 	//	System.err.println(Arrays.toString(arr));
-		System.err.println(Arrays.toString(reverse(arr)));
-		
+	//	System.err.println(Arrays.toString(reverse(arr)));
+		System.err.println(Arrays.toString(reverseArray(arr, 0, arr.length - 1)));
 	}
 	
 	public static int[] reverse(int[] arr) {
@@ -22,6 +22,16 @@ public class ReverseArray {
 		}
 		
 		return result;
+	}
+	
+	public static int[] reverseArray(int[] arr, int start, int end) {
+		
+		while(start < end) {
+			int temp = arr[start];
+			arr[start++] = arr[end];
+			arr[end--] = temp;
+		}
+		return arr;
 	}
 	
 	
