@@ -30,6 +30,18 @@ public class SinglyLinkedList {
 		head = newNode;
 	}
 	
+	public void insertLast(int val) {
+		ListNode newNode = new ListNode(val);
+		if(head == null) {
+			return;
+		}
+		ListNode current = head;
+		while(null != current.next) {
+			current = current.next;
+		}
+		current.next = newNode;
+	}
+	
 	public int length() {
 		if(head == null) {
 			return 0;
@@ -60,6 +72,8 @@ public class SinglyLinkedList {
 		
 		sll.display();
 		System.err.println("Length : " + sll.length());  */
+		sll.insertFirst(11);
+		sll.insertFirst(8);
 		sll.insertFirst(1);
 		sll.display();
 	}
