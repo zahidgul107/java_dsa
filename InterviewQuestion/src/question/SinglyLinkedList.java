@@ -24,6 +24,12 @@ public class SinglyLinkedList {
 		System.out.print("null");
 	}
 	
+	public void insertFirst(int val) {
+		ListNode newNode = new ListNode(val);
+		newNode.next = head;
+		head = newNode;
+	}
+	
 	public int length() {
 		if(head == null) {
 			return 0;
@@ -42,19 +48,20 @@ public class SinglyLinkedList {
 	public static void main(String[] args) {
 		
 		SinglyLinkedList sll = new SinglyLinkedList();
-		sll.head = new ListNode(10);
+	/*	sll.head = new ListNode(10);
 		ListNode second = new ListNode(1);
 		ListNode third = new ListNode(8);
-		ListNode fourth = new ListNode(11);
+		ListNode fourth = new ListNode(11);  */
 		
 		// Now we will connect them together to form a chain
-		sll.head.next = second;  // 10 --> 1
+	/*	sll.head.next = second;  // 10 --> 1
 		second.next = third; // 10 --> 1 --> 8
-		third.next = fourth; // 10 --> 1 --> 8 --> 11 --> null
+		third.next = fourth; // 10 --> 1 --> 8 --> 11 --> null 
 		
 		sll.display();
-		System.err.println("Length : " + sll.length());
-		
+		System.err.println("Length : " + sll.length());  */
+		sll.insertFirst(1);
+		sll.display();
 	}
 
 }
