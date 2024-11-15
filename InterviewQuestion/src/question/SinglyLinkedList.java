@@ -89,6 +89,9 @@ public class SinglyLinkedList {
 	
 	public ListNode deleteLastNode(SinglyLinkedList ssl) {
 		
+		if(head == null && head.next == null)
+			return head;
+		
 		ListNode current = head;
 		ListNode previous = null;
 		while(current.next != null) {
