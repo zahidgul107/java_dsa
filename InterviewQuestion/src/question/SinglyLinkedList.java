@@ -73,6 +73,7 @@ public class SinglyLinkedList {
 			
 			ListNode current = previous.next;
 			previous.next = node;
+			node.next = current;
 		}
 	}
 	
@@ -94,7 +95,11 @@ public class SinglyLinkedList {
 	/*	sll.insertFirst(11);
 		sll.insertFirst(8);
 		sll.insertFirst(1);  */
-		sll.insert(1, 3);
+		sll.insert(1, 3); // 3 -> null
+		sll.insert(2, 5); // 3 -> 5 -> null
+		sll.insert(1, 2); // 2 -> 3 -> 5 -> null
+		sll.insert(2, 4); // 2 -> 4 -> 3 -> 5 -> null
+		sll.insert(5, 7); // 2 -> 4 -> 3 -> 5 -> 7 -> null
 		sll.display();
 	}
 
