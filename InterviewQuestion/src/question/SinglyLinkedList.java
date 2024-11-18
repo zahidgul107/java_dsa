@@ -119,6 +119,17 @@ public class SinglyLinkedList {
 		}
 	}
 	
+	public boolean searchElement(ListNode head, int target) {
+		ListNode current = head;
+		while(current != null) {
+			if(current.data == target) {
+				return true;
+			}
+			current = current.next;
+		}
+		return false;
+	}
+	
 	public static void main(String[] args) {
 		
 		SinglyLinkedList sll = new SinglyLinkedList();
@@ -150,14 +161,35 @@ public class SinglyLinkedList {
 	//	sll.display();
 	//	sll.deleteLastNode(sll);
 	//	System.err.println("   ");
-		sll.insert(1, 3); // 3 -> null
+	/*	sll.insert(1, 3); // 3 -> null
 		sll.insert(2, 5); // 3 -> 5 -> null
 		sll.insert(1, 2); // 2 -> 3 -> 5 -> null
 		sll.insert(2, 4); // 2 -> 4 -> 3 -> 5 -> null
-		sll.insert(5, 7); // 2 -> 4 -> 3 -> 5 -> 7 -> null
-		sll.deleteAtPosition(1);
-		sll.deleteAtPosition(3);
-		sll.display();
+		sll.insert(5, 7); // 2 -> 4 -> 3 -> 5 -> 7 -> null  */
+	//	sll.deleteAtPosition(1);
+	//	sll.deleteAtPosition(3);
+		
+	//	sll.display();
+	//	sll.searchElement(sll.head, 2);
+		ListNode head = new ListNode(10);
+		ListNode second = new ListNode(8);
+		ListNode third = new ListNode(1);
+		ListNode fourth = new ListNode(11);
+		
+		head.next = second;
+		second.next = third;
+		third.next = fourth;
+		
+		SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
+		singlyLinkedList.display();
+		
+		if (singlyLinkedList.searchElement(head, 1)) {
+			System.err.println("Search Key found !!!");
+		} else {
+			System.err.println("Search Key Not found !!!");
+		}
+		
+		
 	//	System.err.println("   ");
 	//	sll.display();
 	}
