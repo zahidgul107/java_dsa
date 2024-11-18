@@ -102,7 +102,7 @@ public class SinglyLinkedList {
 		return current;
 	}
 	
-	public ListNode deleteAtPosition(int position) {
+	public void deleteAtPosition(int position) {
 		
 		if(position == 1) {
 			head = head.next;
@@ -117,7 +117,6 @@ public class SinglyLinkedList {
 			ListNode current = previous.next;
 			previous.next = current.next;
 		}
-		return current;
 	}
 	
 	public static void main(String[] args) {
@@ -143,15 +142,24 @@ public class SinglyLinkedList {
 		sll.insert(1, 2); // 2 -> 3 -> 5 -> null
 		sll.insert(2, 4); // 2 -> 4 -> 3 -> 5 -> null
 		sll.insert(5, 7); // 2 -> 4 -> 3 -> 5 -> 7 -> null  */
-		sll.insert(1, 10);
+	/*	sll.insert(1, 10);
 		sll.insert(2, 1);
 		sll.insert(3, 11);
-		sll.insert(4, 33);
+		sll.insert(4, 33);  */
 	//	sll.deleteFirst(sll);
 	//	sll.display();
 	//	sll.deleteLastNode(sll);
-		System.err.println("   ");
+	//	System.err.println("   ");
+		sll.insert(1, 3); // 3 -> null
+		sll.insert(2, 5); // 3 -> 5 -> null
+		sll.insert(1, 2); // 2 -> 3 -> 5 -> null
+		sll.insert(2, 4); // 2 -> 4 -> 3 -> 5 -> null
+		sll.insert(5, 7); // 2 -> 4 -> 3 -> 5 -> 7 -> null
+		sll.deleteAtPosition(1);
+		sll.deleteAtPosition(3);
 		sll.display();
+	//	System.err.println("   ");
+	//	sll.display();
 	}
 
 }
