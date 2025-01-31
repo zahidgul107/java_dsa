@@ -3,6 +3,7 @@ package collection_framework.comparator;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 
 public class Student {
@@ -51,6 +52,8 @@ public class Student {
 		students.forEach(s -> {
 			System.err.println(s.name +" " + s.gpa);
 		});
+		
+		HashMap<Integer, String> map = new HashMap<>();
 
 	}
 
