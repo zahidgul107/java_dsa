@@ -16,6 +16,14 @@ public class SingleList {
 		
 		List<String> resList = skills.stream().flatMap(Collection::stream).collect(Collectors.toList());
 		System.err.println(resList);
+		
+		List<String> startWithSList = startWithSList(resList);
+		System.err.println(startWithSList);
+	}
+	
+	public static List<String> startWithSList(List<String> resList) {
+		
+		return resList.stream().filter(s -> s.startsWith("S")).collect(Collectors.toList());
 	}
 
 }
