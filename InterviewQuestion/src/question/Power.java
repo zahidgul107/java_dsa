@@ -10,7 +10,7 @@ public class Power {
 		int b = sc.nextInt();
 		int p = sc.nextInt();
 		
-		System.err.println(power(b, p));
+		System.err.println("Power " + power(b, p));
 	}
 	
 	public static int power(int b, int p) {
