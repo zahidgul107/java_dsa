@@ -11,8 +11,13 @@ public class RemoveDuplicateElements {
 		int[] arr = {2, 5, 4, 8, 9, 3, 5, 4};
 		int[] res = removeDuplicate(arr);
 		System.err.println(Arrays.toString(res));
+		System.err.println(Arrays.toString(removeDupByStream(arr)));
 	}
 	
+	private static int[] removeDupByStream(int[] arr) {
+		return Arrays.stream(arr).distinct().sorted().toArray();	
+	}
+
 	public static int[] removeDuplicate(int[] arr) {
 		
 		Set<Integer> set = new HashSet<>();
