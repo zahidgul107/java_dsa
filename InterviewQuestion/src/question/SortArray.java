@@ -1,5 +1,10 @@
 package question;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class SortArray {
 	
 	public static void main(String args[]) {
@@ -20,6 +25,16 @@ public class SortArray {
 			System.err.println(num);
 		}
 		
+		ArrayList<Integer> list = new ArrayList<>();
+		Collections.addAll(list, 1,2,3,2,4,5,6,9,6);
+		
+		System.err.println(sort(list));
+		
+	}
+
+	private static List<Integer> sort(ArrayList<Integer> list) {
+		
+		return list.stream().sorted().collect(Collectors.toList());
 	}
 
 }
