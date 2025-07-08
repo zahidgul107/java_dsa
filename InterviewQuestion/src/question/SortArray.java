@@ -2,6 +2,7 @@ package question;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -29,7 +30,12 @@ public class SortArray {
 		Collections.addAll(list, 1,2,3,2,4,5,6,9,6);
 		
 		System.err.println(sort(list));
+		System.err.println("Sort by Descending " + sortByDesc(list));
 		
+	}
+
+	private static List<Integer> sortByDesc(ArrayList<Integer> list) {
+		return list.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
 	}
 
 	private static List<Integer> sort(ArrayList<Integer> list) {
