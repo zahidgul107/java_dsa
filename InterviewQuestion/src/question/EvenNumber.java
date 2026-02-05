@@ -1,10 +1,8 @@
 package question;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class EvenNumber {
 	
@@ -16,6 +14,16 @@ public class EvenNumber {
 		
 		List<Integer> evenL = checkEven(list);
 		System.err.println(evenL);
+		
+		List<Integer> evenList = new ArrayList<>();
+		
+		for(Integer n : list) {
+			if(n % 2 == 0) {
+				evenList.add(n);
+			}
+		}
+		
+		System.err.println(evenList);
 	}
 
 	public static List<Integer> checkEven(List<Integer> list) {
